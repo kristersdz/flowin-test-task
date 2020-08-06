@@ -1,5 +1,8 @@
 import React from 'react'
+
 import './App.css'
+
+import Header from './Components/Header'
 import { useAxiosGet } from './Hooks/HttpRequests'
 
 function App() {
@@ -19,6 +22,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       <h3>Posts</h3>
       {content}
     </div>
