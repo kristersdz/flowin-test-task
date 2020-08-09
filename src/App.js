@@ -1,32 +1,31 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 
 import './App.css'
 
-import Header from './Components/Header'
-import { useAxiosGet } from './Hooks/HttpRequests'
+// Pages
+import HomePage from './Pages/'; // Home page
+import PortfolioPage from './Pages/portfolio'; // Portfolio
 
-function App() {
-  const path = '/wp-json/wp/v2/portfolio/';
-  let portfolio = useAxiosGet(path);
-  let content = null;
-
-  if(portfolio.data){
-    content = portfolio.data.map((post) => 
+class App extends Component {
+  render() {
+    return (
       <div>
-        <h4>{post.title.rendered}</h4>
-        <p>{post.acf.page__title_secondary}</p>
-        <p>{post.content.rendered}</p>
+        <Router>
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+            <Route exact path="/portfolio" component={PortfolioPage} />
+            <Route path="/portfolio/:id">
+              <h3>This is chosen portoflio page</h3>
+            </Route>
+            <Route path="/about-us">
+              <h3>This is about us</h3>
+            </Route>
+          </Switch>
+        </Router>
       </div>
-    )
+    );
   }
-
-  return (
-    <div className="App">
-      <Header />
-      <h3>Posts</h3>
-      {content}
-    </div>
-  );
 }
 
 export default App;

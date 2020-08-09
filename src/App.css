@@ -1,6 +1,7 @@
 * {
     margin: 0; padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -28,11 +29,28 @@ header {
 .menu-items > ul > li {
     margin: 25px 20px;
     font-size: 24px;
+}
+.menu-items > ul > li > a {
+    position: relative;
+    color: #000;
+    text-decoration: none;
     cursor: pointer;
     transition: .3s;
 }
-.menu-items > ul > li:hover {
+.menu-items > ul > li > a:hover {
     color: #fff;
+}
+.menu-items > ul > li > a::before {
+    content: '';
+    position: absolute;
+    right: 0; bottom: 0;
+    width: 0; height: 2px;
+    background: #000;
+    transition: .3s;
+}
+.menu-items > ul > li > a:hover::before {
+    width: 100%;
+    background: #fff;
 }
 .menu-items.active {
     right: 0;
@@ -40,7 +58,7 @@ header {
 
 .menu-icon {
     position: relative;
-    width: 30px;
+    width: 25px;
     z-index: 1;
 }
 .menu-icon > .line {
