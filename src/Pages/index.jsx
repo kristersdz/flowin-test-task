@@ -2,13 +2,11 @@ import React from 'react'
 
 import '../Style/frontpage.scss'
 
-import Header from '../Components/Header'
 import Portfolio from '../Components/Portfolio'
 
 const HomePage = () => {
     return (
         <div>
-            <Header />
             <div className="main-container">
                 <div className="page-info">
                     <div className="content">
@@ -24,7 +22,7 @@ const HomePage = () => {
                 <div className="section-title">
                     <h2>Portfolio</h2>
                 </div>
-                <Portfolio perPage="3" />
+                <Portfolio perPage="3" link={true} />
             </div>
 
             <div className="circle"></div>

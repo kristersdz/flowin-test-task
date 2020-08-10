@@ -1,0 +1,48 @@
+
+.portfolio-page-container {
+    padding: 30px 50px;
+
+    .page-title {
+        margin-top: 100px;
+        font-size: 25px;
+    }
+    
+    .portfolio {
+        &__item {
+            position: relative;
+            padding: 15px; margin: 20px 0;
+            background: rgb(240, 240, 240);
+            border-radius: 15px;
+            overflow: hidden;
+
+            a {
+                .portfolio__item__img {
+                    width: 25%; height: 100%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            a {
+                color: #000;
+
+                .portfolio__item__title {
+                    position: absolute;
+                    left: 27%; top: 15px;
+                }
+            }
+
+            .portfolio__item__secondary-title {
+                position: absolute;
+                left: 27%; top: 65px;
+                font-size: 14px;
+            }
+
+            .portfolio__item__content {
+                display: none;
+            }
+        }
+    }
+}

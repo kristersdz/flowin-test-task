@@ -1,9 +1,16 @@
 import React from 'react'
 
+import '../Style/portfoliopage.scss'
+
+import Portfolio from '../Components/Portfolio'
+
 const PortfolioPage = () => {
     return (
-        <div>
-            <h3>This is portfolio</h3>
+        <div className="portfolio-page-container">
+            <div className="page-title">
+                <h2>Portfolio</h2>
+            </div>
+            <Portfolio link={true} />
         </div>
     )
 }

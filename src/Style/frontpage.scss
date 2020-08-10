@@ -67,27 +67,34 @@
             width: 28%;
             cursor: pointer;
 
-            &__img {
-                position: relative;
-                display: inline-block;
-                width: 100%; height: 275px;
-                overflow: hidden;
+            a {
+                .portfolio__item__img {
+                    position: relative;
+                    display: inline-block;
+                    width: 100%; height: 275px;
+                    overflow: hidden;
 
-                img {
-                    position: absolute;
-                    width: auto; height: 100%;
-                    transition: .3s;
+                    img {
+                        position: absolute;
+                        width: auto; height: 100%;
+                        transition: .3s;
 
-                    &:empty {
-                        top: 50%; left: 50%;
-                        transform: translate(-50%, -50%);
+                        &:empty {
+                            top: 50%; left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
                     }
                 }
             }
 
-            &__title {
-                margin: 10px 0;
-                font-family: 'Montsserat';
+            a {
+                color: #000;
+                text-decoration: none;
+                
+                &__title {
+                    margin: 10px 0;
+                    font-family: 'Montsserat';
+                }
             }
 
             &__secondary-title {
@@ -99,9 +106,11 @@
             }
 
             &:hover {
-                .portfolio__item__img {
-                    img {
-                        transform: scale(1.1) translate(-45%, -45%);
+                a {
+                    .portfolio__item__img {
+                        img {
+                            transform: scale(1.1) translate(-45%, -45%);
+                        }
                     }
                 }
             }
