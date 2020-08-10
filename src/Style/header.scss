@@ -1,0 +1,116 @@
+header {
+    position: absolute;
+    padding: 30px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 1;
+
+    h1 {
+        font-family: 'Montserrat';
+        color: rgb(70, 70, 70);
+    }
+
+    nav {
+        .menu-items {
+            position: fixed;
+            top: 0; right: -30%;
+            width: 30%; height: 100vh;
+            background: #fff;
+            transition: .3s;
+
+            &.active {
+                right: 0;
+            }
+
+            ul {
+                position: absolute;
+                top: 50%; right: 0;
+                transform: translateY(-50%);
+                margin-right: 30px;
+                list-style: none;
+                text-align: right;
+
+                li {
+                    margin: 25px 20px;
+                    font-size: 24px;
+
+                    a {
+                        position: relative;
+                        color: #000;
+                        text-decoration: none;
+                        cursor: pointer;
+                        transition: .3s;
+
+                        &:hover {
+                            &::before {
+                                width: 100%;
+                            }
+                        }
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            right: 0; bottom: 0;
+                            width: 0; height: 2px;
+                            background: #000;
+                            transition: .3s;
+                        }
+                    }
+                }
+            }
+        }
+
+        .menu-icon {
+            position: relative;
+            width: 25px;
+            cursor: pointer;
+            z-index: 1;
+
+            .line {
+                margin: 4px 0;
+                display: block;
+                width: 25px; height: 3px;
+                background: #fff;
+                border-radius: 10px;
+                transition: .3s;
+
+                &:nth-child(2) {
+                    margin-left: 10px;
+                    width: 15px;
+                }
+            }
+
+            &:hover {
+                .line {
+                    &:nth-child(2) {
+                        margin-left: 0;
+                        width: 25px;
+                    }
+                }
+            }
+
+            &.active {
+                position: fixed;
+                right: 35px; top: 30px;
+
+                .line {
+                    background: #000;
+
+                    &:nth-child(1) {
+                        margin-left: 5px; margin-top: 7px;
+                        width: 20px;
+                        transform: rotate(-45deg);
+                    }
+
+                    &:nth-child(2) {
+                        margin-left: 5px; margin-top: -7px;
+                        width: 20px;
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+    }
+}

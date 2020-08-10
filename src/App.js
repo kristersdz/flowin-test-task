@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
-import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
+import { Redirect, Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 
-import './App.css'
+import './Style/style.scss'
 
 // Pages
 import HomePage from './Pages/'; // Home page
-import PortfolioPage from './Pages/portfolio'; // Portfolio
+import PortfolioPage from './Pages/portfolio'; // Portfolio page
+// import PortfolioItemPage from './Pages/portfolioItem'; // Portfolio item page
+// import AboutPage from './Pages/about'; // About page
+// import ContactPage from './Pages/contact'; // Contact page
 
 class App extends Component {
   render() {
@@ -15,17 +18,14 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/portfolio" component={PortfolioPage} />
-            <Route path="/portfolio/:id">
-              <h3>This is chosen portoflio page</h3>
-            </Route>
-            <Route path="/about-us">
-              <h3>This is about us</h3>
-            </Route>
           </Switch>
         </Router>
       </div>
     );
   }
 }
-
+/*
+<Route exact path="/portfolio/:id" component={PortfolioItemPage} />
+            <Route exact path="/about" component={AboutPage} />
+            <Route exact path="/contact" component={ContactPage} />*/
 export default App;

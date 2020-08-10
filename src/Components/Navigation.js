@@ -4,14 +4,7 @@ import NavigationMenuItems from './NavigationMenu'
 
 function Navigation() {
     const [showNav, setShowNav] = useState(false)
-
-    let menu
-
-    if (showNav) {
-        menu = <ul>
-            <NavigationMenuItems />
-        </ul>
-    }
+    
     return(
         <nav>
             <div className={`${showNav ? 'active': ''} menu-icon`} onClick={() => setShowNav(!showNav)}>
@@ -19,7 +12,9 @@ function Navigation() {
                 <div className="line"/>
             </div>
             <div className={`${showNav ? 'active': ''} menu-items`}>
-                { menu }
+                <ul>
+                    <NavigationMenuItems />
+                </ul>
             </div>
         </nav>
     )

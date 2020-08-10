@@ -34,5 +34,8 @@ export function useAxiosGet(path) {
             })
     }, [fullPath])
 
+    if(request.loading) {
+        return <div>Loading...</div>
+    }
     return request
 }

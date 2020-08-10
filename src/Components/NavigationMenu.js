@@ -1,35 +1,28 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faHome, faBullhorn, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
-
-library.add(faHome, faBullhorn, faInfoCircle);
 
 function NavigationMenuItems() {
     let menuItems = [
         {
             'title': "Home",
-            'path': '/',
-            'icon': 'home'
+            'path': '/'
         },
         {
             'title': "Portfolio",
-            'path': '/portfolio',
-            'icon': 'bullhorn'
+            'path': '/portfolio'
         },
         {
-            'title': "About Us",
-            'path': '/about-us',
-            'icon': 'info-circle'
+            'title': "About",
+            'path': '/about'
+        },
+        {
+            'title': "Contact",
+            'path': '/contact'
         }
     ]
     return(
-        menuItems.map((menuItem) => 
+        menuItems.map(menuItem => 
             <li>
-                <span className="menu-item-icon">
-                    <FontAwesomeIcon icon={menuItem.icon} />
-                </span>
                 <Link to={menuItem.path}>{menuItem.title}</Link>
             </li>
         )
