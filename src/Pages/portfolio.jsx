@@ -6,7 +6,7 @@ import Portfolio from '../components/Portfolio'
 
 const PortfolioPage = () => {
     return (
-        <div className="portfolio-page-container">
+        <div className="portfolio-page-container container">
             <div className="page-title">
                 <h2>Portfolio</h2>
             </div>

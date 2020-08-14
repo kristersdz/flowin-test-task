@@ -1,5 +1,4 @@
 footer {
-    padding: 30px 50px;
     position: relative;
     background: #1b2230; color: #fff;
     font-family: 'Montserrat', sans-serif;
@@ -31,6 +30,12 @@ footer {
                         stroke: #d85a56;
                     }
                 }
+            }
+        }
+
+        &.subscribe {
+            button {
+                margin-left: 5px;
             }
         }
 

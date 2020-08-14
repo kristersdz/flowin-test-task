@@ -4,9 +4,9 @@ import '../style/footer.scss';
 
 function Footer() {
     return(
-        <footer>
-            <div class="footer-section social-media">
-                <p class="footer-section__title">Social media</p>
+        <footer className="container">
+            <div className="footer-section social-media">
+                <p className="footer-section__title">Social media</p>
                 <a href="https://facebook.com/dzindzits" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
                 </a>
@@ -20,13 +20,13 @@ function Footer() {
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                 </a>
             </div>
-            <div class="footer-section subscribe">
-                <p class="footer-section__title">Subscribe to newsletter</p>
+            <div className="footer-section subscribe">
+                <p className="footer-section__title">Subscribe to newsletter</p>
                 <input type="email" placeholder="Email" />
                 <button type="submit">Submit</button>
             </div>
-            <div class="footer-section more">
-                <p class="footer-section__title">More</p>
+            <div className="footer-section more">
+                <p className="footer-section__title">More</p>
                 <a href="#" target="_blank">You can find source code on this GitHub repository</a>
             </div>
         </footer>
