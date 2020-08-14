@@ -1,15 +1,19 @@
 header {
     position: absolute;
-    padding: 30px 50px;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
-    width: 100%;
-    z-index: 1;
+    width: 100%; height: 60px;
+    z-index: 2;
 
-    h1 {
+    .title {
         font-family: 'Montserrat';
-        color: rgb(70, 70, 70);
+        padding: 0 20px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 1.2em;
+        font-weight: 700;
+        background: #fff; color: #000;
     }
 
     nav {
@@ -43,6 +47,16 @@ header {
                         cursor: pointer;
                         transition: .3s;
 
+                        &.active {
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                right: 0; bottom: 0;
+                                width: 100%; height: 2px;
+                                background: #000;
+                            }
+                        }
+
                         &:hover {
                             &::before {
                                 width: 100%;
@@ -63,16 +77,17 @@ header {
         }
 
         .menu-icon {
+            padding: 20px;
             position: relative;
-            width: 25px;
             cursor: pointer;
+            background: #fff;
             z-index: 1;
 
             .line {
                 margin: 4px 0;
                 display: block;
                 width: 25px; height: 3px;
-                background: #ccc;
+                background: #000;
                 border-radius: 10px;
                 transition: .3s;
 
@@ -93,7 +108,7 @@ header {
 
             &.active {
                 position: fixed;
-                right: 50px; top: 40px;
+                right: 0; top: 0;
 
                 .line {
                     background: #000;
@@ -117,13 +132,7 @@ header {
 
 @media (max-width: 767px) {
     header {
-        padding: 15px 25px;
-        z-index: 2;
-
-        h1 {
-            font-size: 20px;
-            color: #fff;
-        }
+        background: #fff;
 
         nav {
             .menu-items {
@@ -133,12 +142,6 @@ header {
     
                 &.active {
                     right: 0;
-                }
-            }
-
-            .menu-icon {
-                &.active {
-                    right: 25px; top: 20px;
                 }
             }
         }

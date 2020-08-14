@@ -1,8 +1,8 @@
 import React from 'react'
 
-import '../Style/portfoliopage.scss'
+import '../style/portfoliopage.scss'
 
-import Portfolio from '../Components/Portfolio'
+import Portfolio from '../components/Portfolio'
 
 const PortfolioPage = () => {
     return (

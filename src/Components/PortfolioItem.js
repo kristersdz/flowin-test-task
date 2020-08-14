@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-import { useAxiosGet } from '../Hooks/HttpRequests'
+import { useAxiosGet } from '../hooks/HttpRequests'
 
 function PortfolioItem(props) {
     const { id, title, acf, content, featured_media } = props.post;

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Portfolio from '../Components/Portfolio'
+import Portfolio from '../components/Portfolio'
 
 const PortfolioItemPage = (props) => {
     console.log(props.match.params.id)

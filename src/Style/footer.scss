@@ -1,0 +1,48 @@
+footer {
+    padding: 30px 50px;
+    position: relative;
+    background: #1b2230; color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7em; font-weight: 700;
+
+    .footer-section {
+        margin: 20px 0;
+
+        &__title {
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        &.social-media {
+            a {
+                text-decoration: none;
+
+                svg {
+                    margin: 0 10px;
+                    fill: none;
+                    stroke: #fff;
+                    transition: all .25s ease;
+
+                    &:nth-child(1) {
+                        margin-left: 0;
+                    }
+
+                    &:hover {
+                        stroke: #d85a56;
+                    }
+                }
+            }
+        }
+
+        &.more {
+            a {
+                color: #fff;
+                transition: all .25s ease;
+
+                &:hover {
+                    color: #d85a56;
+                }
+            }
+        }
+    }
+}

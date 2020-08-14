@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { useAxiosGet } from '../Hooks/HttpRequests'
+import { useAxiosGet } from '../hooks/HttpRequests'
 
 import PorfolioItem from './PortfolioItem'
 

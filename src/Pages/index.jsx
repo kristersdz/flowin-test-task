@@ -1,8 +1,8 @@
 import React from 'react'
 
-import '../Style/frontpage.scss'
+import '../style/frontpage.scss'
 
-import Portfolio from '../Components/Portfolio'
+import Portfolio from '../components/Portfolio'
 
 const HomePage = () => {
     return (

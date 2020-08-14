@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { useAxiosGet } from '../Hooks/HttpRequests'
+import { useAxiosGet } from '../hooks/HttpRequests'
 
-import '../Style/header.scss'
+import '../style/header.scss'
 
 import Navigation from './Navigation'
 
@@ -16,7 +16,7 @@ function Header() {
 
         return(
             <header>
-                <h1>{pageTitle}</h1>
+                <div class="title">{pageTitle}</div>
                 <Navigation/>
             </header>
         )
