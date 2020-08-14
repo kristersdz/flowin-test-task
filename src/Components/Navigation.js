@@ -13,7 +13,7 @@ function Navigation() {
             </div>
             <div className={`${showNav ? 'active': ''} menu-items`}>
                 <ul>
-                    <NavigationMenuItems />
+                    <NavigationMenuItems closeMenu={() => setShowNav(false)}/>
                 </ul>
             </div>
         </nav>

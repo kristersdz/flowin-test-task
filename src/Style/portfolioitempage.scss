@@ -1,0 +1,111 @@
+.post-container {
+    margin-top: 70px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%; transform: translateX(-50%);
+        width: 50px; height: 2px;
+        background: #d85a56;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%; transform: translateX(-50%);
+        width: 50px; height: 2px;
+        background: #d85a56;
+    }
+
+    .post-card {
+        .post-card-title {
+            margin: 10px auto 0 auto;
+            position: relative;
+            width: 50%;
+            text-align: center;
+        }
+
+        .post-card-secondary-title {
+            margin: 5px auto;
+            position: relative;
+            width: 50%;
+            color: #868686;
+            text-align: center;
+        }
+
+        .post-card-date {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            font-size: 14px; font-weight: 600;
+            color: #d85a56;
+
+            svg {
+                stroke: #d85a56;
+            }
+            p {
+                margin-left: 10px;
+            }
+        }
+
+        .post-card-img {
+            margin: 30px auto;
+            position: relative;
+            width: 70%; height: 35vh;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            background-position: center;
+            transition: all .25s ease;
+        }
+
+        .post-card-content {
+            margin: 50px 0 30px 0;
+
+            p {
+                margin: 30px auto;
+                width: 50%;
+                color: rgb(70, 70, 70);
+                font-family: 'Merriweather', serif;
+
+                &:first-letter {
+                    padding-left: 40px;
+                }
+
+                &:first-child:first-letter {
+                    color: #000;
+                    float: left;
+                    font-size: 75px;
+                    font-weight: 700;
+                    line-height: 20px;
+                    padding-left: 0;
+                    padding-right: 8px;
+                    padding-bottom: 15px;
+                }
+            }
+        }  
+    }
+}
+
+@media (max-width: 767px) {
+    .post-container {
+        .post-card {
+            .post-card-img {
+                width: 80%; height: 25vh;
+            }
+
+            .post-card-title {
+                width: 80%;
+            }
+
+            .post-card-secondary-title {
+                width: 90%;
+            }
+
+            .post-card-content {
+                p {
+                    width: 80%;
+                }
+            }
+        }
+    }
+}

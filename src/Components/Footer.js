@@ -27,7 +27,7 @@ function Footer() {
             </div>
             <div className="footer-section more">
                 <p className="footer-section__title">More</p>
-                <a href="#" target="_blank">You can find source code on this GitHub repository</a>
+                <a href="https://github.com/kristersdz/flowin-test-task" target="_blank">You can find source code on this GitHub repository</a>
             </div>
         </footer>
     )

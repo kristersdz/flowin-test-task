@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 import { useAxiosGet } from '../hooks/HttpRequests'
 
@@ -16,7 +17,9 @@ function Header() {
 
         return(
             <header>
-                <div class="title">{pageTitle}</div>
+                <Link to="/">
+                    <div class="title">{pageTitle}</div>
+                </Link>
                 <Navigation/>
             </header>
         )

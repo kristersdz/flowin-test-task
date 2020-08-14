@@ -1,7 +1,7 @@
 import React from 'react'
 
-export function useDateFormat(input) {
-    var inputDate = input.toString().replace("T"," ");
+const DateFormat = (props) => {
+    var inputDate = props.date.toString().replace("T"," ");
     if (inputDate !== undefined && inputDate !== null) {
         var myDate = new Date(inputDate);
         var month = [
@@ -19,7 +19,9 @@ export function useDateFormat(input) {
             "December",
         ][myDate.getMonth()];
         var str = myDate.getDate() + " " + month + ", " + myDate.getFullYear();
-        return str;
+    return <p>{str}</p>;
     }
     return null;
 }
+
+export default DateFormat;

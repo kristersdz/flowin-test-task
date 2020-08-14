@@ -10,9 +10,7 @@ import Footer from './components/Footer'
 import HomePage from './pages/'; // Home page
 import PortfolioPage from './pages/portfolio'; // Portfolio page
 import PortfolioItemPage from './pages/portfolioItem'; // Portfolio item page
-// import AboutPage from './pages/about'; // About page
-// import ContactPage from './pages/contact'; // Contact page
-// import NotFoundPage from './pages/404'; // Contact page
+import NotFoundPage from './pages/404'; // Contact page
 
 class App extends Component {
   render() {
@@ -25,6 +23,7 @@ class App extends Component {
             <Route exact path="/" component={HomePage} />
             <Route exact path="/portfolio" component={PortfolioPage} />
             <Route exact path="/portfolio/:id" component={PortfolioItemPage} />
+            <Route exact path="/404" component={NotFoundPage} />
 
             <Redirect to="/404" />
           </Switch>
@@ -35,8 +34,5 @@ class App extends Component {
     );
   }
 }
-/*
-<Route exact path="/404" component={NotFoundPage} />
-<Route exact path="/about" component={AboutPage} />
-<Route exact path="/contact" component={ContactPage} />*/
+
 export default App;

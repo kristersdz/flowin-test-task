@@ -6,11 +6,11 @@ import Portfolio from '../components/Portfolio'
 
 const PortfolioPage = () => {
     return (
-        <div className="portfolio-page-container container">
-            <div className="page-title">
-                <h2>Portfolio</h2>
+        <div className="portfolio-container container">
+            <h1 class="page-title">Portfolio</h1>
+            <div className="portfolio">
+                <Portfolio link={true} />
             </div>
-            <Portfolio link={true} />
         </div>
     )
 }

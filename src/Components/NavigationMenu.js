@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 
-function NavigationMenuItems() {
+function NavigationMenuItems(props) {
     let menuItems = [
         {
             'title': "Home",
@@ -31,6 +31,7 @@ function NavigationMenuItems() {
                     exact={menuItem.exact}
                     to={menuItem.path}
                     activeClassName="active"
+                    onClick={props.closeMenu}
                 >
                     {menuItem.title}
                 </NavLink>
